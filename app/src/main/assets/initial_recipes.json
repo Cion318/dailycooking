@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Scharfer Reis",
+    "categories": ["Reis"],
+    "source": "-",
+    "cookTime": "20",
+    "calories": "423",
+    "servings": "4",
+    "points": "7",
+    "ingredients": ["Reis", "Curry", "Chilli", "Pfeffer"],
+    "instructions": ["Reis mit Curry abschmecken", "Reis mit Chilli abschmecken", "Reis mit Pfeffer abschmecken."],
+    "image": ""
+  },
+  {
+    "name": "Türkischer Reis",
+    "categories": ["Reis"],
+    "source": "Türkisches Kochbuch S.186",
+    "cookTime": "20",
+    "calories": "423",
+    "servings": "4",
+    "points": "3",
+    "ingredients": ["Reis", "Curry", "Chilli", "Pfeffer"],
+    "instructions": ["Reis mit Curry abschmecken", "Reis mit Chilli abschmecken", "Reis mit Pfeffer abschmecken."],
+    "image": ""
+  },
+  {
+    "name": "Nasigoreng",
+    "categories": ["Reis", "Fisch", "Nudeln", "Vollkorn", "Gemüse"],
+    "source": "Gelber Ordner",
+    "cookTime": "20",
+    "calories": "423",
+    "servings": "4",
+    "points": "5",
+    "ingredients": ["Reis", "Curry", "Chilli", "Pfeffer"],
+    "instructions": ["Reis mit Curry abschmecken", "Reis mit Chilli abschmecken", "Reis mit Pfeffer abschmecken."],
+    "image": ""
+  },
+  {
+    "name": "Indonesischer Curryreis mit Hähnchenbrust",
+    "categories": ["Reis", "Hähnchen"],
+    "source": "Wok S.60",
+    "cookTime": "20",
+    "calories": "423",
+    "servings": "4",
+    "points": "9",
+    "ingredients": ["Reis", "Curry", "Chilli", "Pfeffer"],
+    "instructions": ["Reis mit Curry abschmecken", "Reis mit Chilli abschmecken", "Reis mit Pfeffer abschmecken."],
+    "image": ""
+  },
+  {
+    "name": "Garnelen Risotto",
+    "categories": ["Reis", "Fisch"],
+    "source": "Gelber Ordner",
+    "cookTime": "20",
+    "calories": "423",
+    "servings": "4",
+    "points": "6",
+    "ingredients": ["Reis", "Curry", "Chilli", "Pfeffer"],
+    "instructions": ["Reis mit Curry abschmecken", "Reis mit Chilli abschmecken", "Reis mit Pfeffer abschmecken."],
+    "image": ""
+  },
+  {
+    "name": "Gebratener Reis mit Garnelen, Avocado und Bohnen",
+    "categories": ["Reis", "Fisch"],
+    "source": "Asia Kochbuch S.98",
+    "cookTime": "20",
+    "calories": "423",
+    "servings": "4",
+    "points": "1",
+    "ingredients": ["Reis", "Curry", "Chilli", "Pfeffer"],
+    "instructions": ["Reis mit Curry abschmecken", "Reis mit Chilli abschmecken", "Reis mit Pfeffer abschmecken."],
+    "image": ""
+  }
+]

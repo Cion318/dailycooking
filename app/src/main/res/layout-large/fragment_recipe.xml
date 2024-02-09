@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?><!-- TODO: Done as of 17.01 (Subject to Changes) -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="80dp">
+
+    <!-- Back & Edit Buttons ******************************************************************* -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/light_gray"
+        android:contentDescription="@string/recipeFragmentBackButton"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_back"
+        app:iconGravity="textStart"
+        app:iconSize="30dp"
+        app:iconTint="@color/light_gray_text"
+        app:layout_constraintStart_toStartOf="@id/scrollView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/editButton"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/light_gray"
+        android:contentDescription="@string/recipeFragmentEditButton"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_edit"
+        app:iconGravity="textStart"
+        app:iconSize="20dp"
+        app:iconTint="@color/light_gray_text"
+        app:layout_constraintEnd_toEndOf="@id/scrollView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutInner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Recipe Image ************************************************************************** -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/recipeImageImageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:elevation="30dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:strokeColor="@color/orange"
+                app:strokeWidth="2dp" />
+
+            <!-- Background Container ****************************************************************** -->
+            <View
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/container_top_radius"
+                app:layout_constraintTop_toBottomOf="@+id/recipeImageImageView"
+                app:layout_constraintBottom_toBottomOf="@id/helperView"
+                tools:layout_editor_absoluteX="-153dp" />
+
+            <!-- Title ********************************************************************************* -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="300dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/container" />
+
+
+            <!-- CookTime ****************************************************************************** -->
+            <ImageView
+                android:id="@+id/cookTimeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:contentDescription="@string/recipeFragmentIconTime"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toStartOf="@id/divider1"
+                app:layout_constraintTop_toTopOf="@+id/caloriesIcon"
+                app:srcCompat="@drawable/ic_time"
+                app:tint="@color/orange" />
+
+            <TextView
+                android:id="@+id/cookTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/cookTimeIcon"
+                app:layout_constraintStart_toStartOf="@+id/cookTimeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/cookTimeIcon" />
+
+            <TextView
+                android:id="@+id/cookTimeFlavorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/recipeFragmentFlavorTime"
+                android:textColor="@color/light_gray_text"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/cookTimeIcon"
+                app:layout_constraintStart_toStartOf="@id/cookTimeIcon"
+                app:layout_constraintTop_toBottomOf="@+id/cookTimeTextView" />
+
+            <!-- Divider 1 ***************************************************************************** -->
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="40dp"
+                android:background="@color/light_gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/caloriesFlavorText"
+                app:layout_constraintEnd_toStartOf="@id/caloriesIcon"
+                app:layout_constraintTop_toTopOf="@id/caloriesIcon" />
+
+            <!-- Calories ****************************************************************************** -->
+            <ImageView
+                android:id="@+id/caloriesIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/recipeFragmentIconCalories"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/container"
+                app:layout_constraintStart_toStartOf="@+id/container"
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+                app:srcCompat="@drawable/ic_kcal"
+                app:tint="@color/orange" />
+
+            <TextView
+                android:id="@+id/caloriesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/container"
+                app:layout_constraintStart_toStartOf="@+id/container"
+                app:layout_constraintTop_toBottomOf="@+id/caloriesIcon" />
+
+            <TextView
+                android:id="@+id/caloriesFlavorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeFragmentFlavorCalories"
+                android:textColor="@color/light_gray_text"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/container"
+                app:layout_constraintStart_toStartOf="@id/container"
+                app:layout_constraintTop_toBottomOf="@+id/caloriesTextView" />
+
+            <!-- Divider 2 ***************************************************************************** -->
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="40dp"
+                android:background="@color/light_gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/caloriesFlavorText"
+                app:layout_constraintStart_toEndOf="@id/caloriesIcon"
+                app:layout_constraintTop_toTopOf="@id/caloriesIcon" />
+
+            <!-- Points ******************************************************************************** -->
+            <ImageView
+                android:id="@+id/pointsIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:contentDescription="@string/recipeFragmentIconPoints"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                app:layout_constraintStart_toEndOf="@id/divider2"
+                app:layout_constraintTop_toTopOf="@+id/caloriesIcon"
+                app:srcCompat="@drawable/ic_points"
+                app:tint="@color/orange" />
+
+            <TextView
+                android:id="@+id/pointsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/pointsIcon"
+                app:layout_constraintStart_toStartOf="@id/pointsIcon"
+                app:layout_constraintTop_toBottomOf="@id/pointsIcon" />
+
+            <TextView
+                android:id="@+id/pointsFlavorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeFragmentFlavorPoints"
+                android:textColor="@color/light_gray_text"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/pointsIcon"
+                app:layout_constraintStart_toStartOf="@id/pointsIcon"
+                app:layout_constraintTop_toBottomOf="@id/pointsTextView" />
+
+
+            <!-- SwitchButton Ingredients/Instructions ************************************************* -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:thumb="@drawable/custom_switch_dark_gray_thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/caloriesFlavorText"
+                app:switchMinWidth="300dp"
+                app:track="@drawable/custom_switch_dark_gray_track" />
+
+            <TextView
+                android:id="@+id/ingredientsFlavorText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeFragmentSwitchIngredients"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                app:layout_constraintBottom_toBottomOf="@id/switchButton"
+                app:layout_constraintLeft_toLeftOf="@id/switchButton"
+                app:layout_constraintTop_toTopOf="@id/switchButton" />
+
+            <TextView
+                android:id="@+id/instructionsFlavorText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/recipeFragmentSwitchInstructions"
+                android:textAlignment="center"
+                android:textColor="@color/light_gray_text"
+                app:layout_constraintBottom_toBottomOf="@id/switchButton"
+                app:layout_constraintRight_toRightOf="@id/switchButton"
+                app:layout_constraintTop_toTopOf="@id/switchButton" />
+
+            <!-- Ingredients / Instructions TextViews ************************************************** -->
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:lineHeight="20dp"
+                android:textColor="@color/light_gray_text"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switchButton" />
+
+            <TextView
+                android:id="@+id/instructionsTextView"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:lineHeight="20dp"
+                android:textColor="@color/light_gray_text"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switchButton" />
+
+            <View
+                android:id="@+id/helperView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/ingredientsTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="120dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

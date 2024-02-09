@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Daily Cooking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- RecipeFragment Strings -->
+    <string name="recipeFragmentBackButton">Zurück</string>
+    <string name="recipeFragmentEditButton">Editieren</string>
+    <string name="recipeFragmentIconTime">Kochzeit Icon</string>
+    <string name="recipeFragmentFlavorTime">Minuten</string>
+    <string name="recipeFragmentIconCalories">Kalorien Icon</string>
+    <string name="recipeFragmentFlavorCalories">Kalorien</string>
+    <string name="recipeFragmentIconPoints">Punkte Icon</string>
+    <string name="recipeFragmentFlavorPoints">Punkte</string>
+    <string name="recipeFragmentSwitchIngredients">Zutaten</string>
+    <string name="recipeFragmentSwitchInstructions">Zubereitung</string>
+
+    <!-- CookbookFragment Strings -->
+    <string name="cookbookTitle">Rezeptbuch</string>
+    <string name="cookbookSortAsc">Aufsteigend</string>
+    <string name="cookbookSortDesc">Absteigend</string>
+
+    <!-- Strings associated with NewRecipeFragment & EditRecipeFragment -->
+    <string name="updateTitleNew">Neues Rezept</string>
+    <string name="updateTitleEdit">Rezept bearbeiten</string>
+    <string name="updateNecessaryDivider">Notwendig</string>
+    <string name="updateNameFlavor">Name des Rezepts</string>
+    <string name="updateCategoryFlavor">Kategorie (Nudeln, Fisch, …)</string>
+    <string name="updateCategoryAddButton">Kategorie hinzufügen</string>
+    <string name="updateOptionalDivider">Optional</string>
+    <string name="updateSourceFlavor">Wo finde ich das Rezept</string>
+    <string name="updateCookTimeFlavor">Kochzeit (min)</string>
+    <string name="updateServingsFlavor">Portionen</string>
+    <string name="updateCaloriesFlavor">Kalorien</string>
+    <string name="updatePointsFlavor">Punkte</string>
+    <string name="updateIngredientsFlavor">Zutat</string>
+    <string name="updateIngredientsAddButton">Zutat hinzufügen</string>
+    <string name="updateInstructionsFlavor">Kochanweisung</string>
+    <string name="updateInstructionsAddButton">Kochanweisung hinzufügen</string>
+    <string name="updateAddButton">Rezept hinzufügen</string>
+    <string name="updateEditButton">Änderungen speichern</string>
+    <string name="updateToastNew">Rezept gespeichert</string>
+    <string name="updateToastEdit">Rezept aktualisiert</string>
+    <string name="updateToastDelete">Rezept entfernt</string>
+    <string name="updateNameError">Dieses Feld ist notwendig</string>
+    <string name="updateCategoryError">Mindestens eine Kategorie ist notwendig</string>
+    <string name="updateBackButton">Zurück</string>
+    <string name="updateDeleteButton">Löschen</string>
+    <string name="updateSelectImage">Bild auswählen</string>
+
+</resources>

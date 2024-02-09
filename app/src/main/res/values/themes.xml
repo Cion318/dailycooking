@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.DailyCooking" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/orange</item> <!-- DONE -->
+        <item name="colorPrimaryDark">@color/dark_gray</item>
+        <item name="colorOnPrimary">@color/blue_900</item>
+        <item name="colorPrimaryContainer">@color/green_900</item>
+        <item name="colorOnPrimaryContainer">@color/teal_900</item>
+        <item name="colorPrimaryInverse">@color/slate_900</item>
+        <item name="android:navigationBarColor">@color/dark_gray</item>
+
+        <item name="colorSecondary">@color/orange_900</item>
+        <item name="colorOnSecondary">@color/rose_900</item>
+        <item name="colorSecondaryContainer">@color/cyan_900</item>
+        <item name="colorOnSecondaryContainer">@color/stone_900</item>
+
+        <item name="colorTertiary">@color/yellow_900</item>
+        <item name="colorOnTertiary">@color/fuchsia_900</item>
+        <item name="colorTertiaryContainer">@color/fuchsia_300</item>
+        <item name="colorOnTertiaryContainer">@color/yellow_400</item>
+
+        <item name="android:colorBackground">@color/dark_gray</item> <!-- DONE -->
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorSurface">@color/dark_gray</item>
+        <item name="colorOnSurface">@color/white</item> <!-- DONE -->
+        <item name="colorSurfaceVariant">@color/red_300</item>
+        <item name="colorOnSurfaceVariant">@color/red_800</item>
+        <item name="colorSurfaceInverse">@color/sky_300</item>
+        <item name="colorOnSurfaceInverse">@color/sky_800</item>
+    </style>
+
+    <style name="customToast">
+        <item name="stTextBold">false</item>
+        <item name="stTextColor">@color/white</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">@color/light_gray</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">2dp</item>
+        <item name="stStrokeColor">@color/orange</item>
+        <item name="stLength">LONG</item>
+    </style>
+
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:buttonBarButtonStyle">@style/CustomButton</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:background">@color/dark_gray</item>
+    </style>
+
+    <style name="CustomButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <!-- Set the text color of the button -->
+        <item name="android:textColor">@color/orange</item>
+    </style>
+</resources>

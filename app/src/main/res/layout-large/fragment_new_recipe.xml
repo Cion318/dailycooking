@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:orientation="vertical"
+    android:layout_marginStart="80dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:text="@string/updateTitleNew"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="26sp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="10dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="10dp"/>
+
+    <!-- Start of Input Form -->
+    <ScrollView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Start of single ScrollView child -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp">
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Start of necessary Fields Div -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/container_all_radius"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!-- Necessary separator views -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/updateNecessaryDivider"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+                <!-- Recipe Name EditText-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameEditTextLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/updateNameFlavor"
+                    android:paddingVertical="5dp"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Start of the Categories Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Category EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/categoryEditTextLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="2"
+                        android:hint="@string/updateCategoryFlavor"
+                        android:paddingVertical="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/categoryEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Category AddButton -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addCategoryButton"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/updateCategoryAddButton"
+                        app:backgroundTint="@color/orange"
+                        app:icon="@drawable/ic_add"
+                        app:iconGravity="textStart"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/black" />
+                </LinearLayout>
+                <!-- End of the Categories Layout -->
+
+                <!-- Category Tags Container-->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/categoriesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start">
+                    <!-- Other existing views go here -->
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+            <!-- End of necessary Fields Div -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Start of optional Fields Div -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/container_all_radius"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!-- Optional separator views -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/updateOptionalDivider"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+
+                <!-- Recipe Location EditText -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/updateSourceFlavor"
+                    android:paddingVertical="5dp"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sourceEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Start of Preparation & Cooking Time Div -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Preparation Time EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/updateCookTimeFlavor"
+                        android:paddingVertical="5dp"
+                        android:paddingBottom="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/cookTimeEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Cooking Time EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/updateServingsFlavor"
+                        android:paddingVertical="5dp"
+                        android:paddingBottom="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/servingsEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                <!-- End of Preparation & Cooking Time Div -->
+
+                <!-- Start of Calories & Servings Div -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Calories EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/updateCaloriesFlavor"
+                        android:paddingVertical="5dp"
+                        android:paddingBottom="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/caloriesEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Calories EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:hint="@string/updatePointsFlavor"
+                        android:paddingVertical="5dp"
+                        android:paddingBottom="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pointsEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:inputType="number"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+                <!-- End of Calories & Servings Div -->
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                <!-- Start of the Ingredients Div -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Ingredient EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="2"
+                        android:hint="@string/updateIngredientsFlavor"
+                        android:paddingVertical="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ingredientEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Ingredient AddButton -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addIngredientButton"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/updateIngredientsAddButton"
+                        app:backgroundTint="@color/orange"
+                        app:icon="@drawable/ic_add"
+                        app:iconGravity="textStart"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/black" />
+                </LinearLayout>
+                <!-- End of the Ingredients Div -->
+
+                <!-- Ingredients Container-->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/ingredientsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start">
+
+                </com.google.android.flexbox.FlexboxLayout>
+                <!-- End of Ingredients Div -->
+
+                <!-- Start of the Instructions Div -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Category EditText -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="2"
+                        android:hint="@string/updateInstructionsFlavor"
+                        android:paddingVertical="5dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/instructionEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:textColor="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Category AddButton -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/addInstructionButton"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/updateInstructionsAddButton"
+                        app:backgroundTint="@color/orange"
+                        app:icon="@drawable/ic_add"
+                        app:iconGravity="textStart"
+                        app:iconSize="30dp"
+                        app:iconTint="@color/black" />
+                </LinearLayout>
+                <!-- End of the Ingredients Div -->
+
+                <!-- Ingredients Container-->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/instructionsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignContent="stretch"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start" />
+
+            </LinearLayout>
+            <!-- End of optional Fields Div -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Start of optional Fields Div -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/container_all_radius"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!-- Optional separator views -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/updateOptionalDivider"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+                <!-- Start of the Instructions Div -->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:alignItems="center"
+                    app:justifyContent="space_around">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/recipeImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:elevation="30dp"
+                        android:padding="2dp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        app:strokeColor="@color/orange"
+                        app:strokeWidth="1dp" />
+
+                    <!-- Add Recipe Button-->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/selectImageButton"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:text="@string/updateSelectImage"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:backgroundTint="@color/orange" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+            <!-- End of optional Fields Div -->
+
+
+            <!-- Add Recipe Button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addRecipeButton"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:text="@string/updateAddButton"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:backgroundTint="@color/orange" />
+
+        </LinearLayout>
+        <!-- End of single ScrollView child -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    </ScrollView>
+    <!-- End of Input Form -->
+
+</LinearLayout>

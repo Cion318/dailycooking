@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="80dp">
+
+    <!-- Title ********************************************************************************* -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/cookbookTitle"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@id/recyclerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Switch Ingredients/Instructions ******************************************************* -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="70dp"
+        android:thumb="@drawable/custom_switch_light_gray_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:switchMinWidth="350dp"
+        app:track="@drawable/custom_switch_light_gray_track" />
+
+    <TextView
+        android:id="@+id/ascendingFlavorText"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cookbookSortAsc"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="@id/switchButton"
+        app:layout_constraintLeft_toLeftOf="@id/switchButton"
+        app:layout_constraintTop_toTopOf="@id/switchButton" />
+
+    <TextView
+        android:id="@+id/descendingFlavorText"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cookbookSortDesc"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/switchButton"
+        app:layout_constraintRight_toRightOf="@id/switchButton"
+        app:layout_constraintTop_toTopOf="@id/switchButton" />
+
+
+    <!-- Filter Container ********************************************************************** -->
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchButton">
+
+        <!-- Category Tags Container-->
+        <LinearLayout
+            android:id="@+id/categoriesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:alignContent="stretch"
+            app:alignItems="stretch"
+            app:flexWrap="wrap"
+            app:justifyContent="flex_start">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/categoriesChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- RecyclerView ************************************************************************** -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="175dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:layout_marginHorizontal="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
