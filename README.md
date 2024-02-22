@@ -17,13 +17,12 @@ The Daily Cooking App is a mobile application designed to help users store and m
 ## Screenshots
 <table>
   <tr>
-    <td><img src="https://i.imgur.com/UTYHiPY.jpeg" alt="Alt text 1" style="width: 200px;"/></td>
-    <td><img src="https://i.imgur.com/TEJY4Kz.jpeg" alt="Alt text 2" style="width: 200px;"/></td>
-    <td><img src="https://i.imgur.com/YGSbTRW.jpeg" alt="Alt text 2" style="width: 200px;"/></td>
-    <td><img src="https://i.imgur.com/L1F9ddz.jpeg" alt="Alt text 2" style="width: 200px;"/></td>
+    <td><img src="https://i.imgur.com/UTYHiPY.jpeg" alt="Alt text 1" style="width: 220px;"/></td>
+    <td><img src="https://i.imgur.com/TEJY4Kz.jpeg" alt="Alt text 2" style="width: 220px;"/></td>
+    <td><img src="https://i.imgur.com/YGSbTRW.jpeg" alt="Alt text 2" style="width: 220px;"/></td>
+    <td><img src="https://i.imgur.com/L1F9ddz.jpeg" alt="Alt text 2" style="width: 220px;"/></td>
   </tr>
 </table>
-![Alt text](https://i.imgur.com/iTcVA5g.jpeg)
 
 ## Getting Started
 
