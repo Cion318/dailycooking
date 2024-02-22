@@ -1,6 +1,7 @@
 # Daily Cooking App
 
 The Daily Cooking App is a mobile application designed to help users store and manage their favorite recipes. It also provides features to assist users in deciding what to cook.
+(Currently only German language support)
 
 ## Features
 
