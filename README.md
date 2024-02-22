@@ -15,6 +15,13 @@ The Daily Cooking App is a mobile application designed to help users store and m
 - SQLite/Room Database
 
 ## Screenshots
+<table>
+  <tr>
+    <td><img src="https://i.imgur.com/iTcVA5g.jpeg" alt="Alt text 1" style="width: 200px;"/></td>
+    <td><img src="image2_url" alt="Alt text 2" style="width: 200px;"/></td>
+    <!-- Add more rows for additional images -->
+  </tr>
+</table>
 ![Alt text](https://i.imgur.com/iTcVA5g.jpeg)
 
 ## Getting Started
